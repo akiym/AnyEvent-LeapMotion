@@ -107,11 +107,43 @@ AnyEvent::LeapMotion - Perl interface to the Leap Motion Controller (via WebSock
 
 =head1 DESCRIPTION
 
-AnyEvent::LeapMotion is ...
+AnyEvent::LeapMotion is a simple interface to the Leap Motion controller. It receives tracking data through a WebSocket server.
+
+=head1 METHODS
+
+=over 4
+
+=item C<< my $leap = AnyEvent::LeapMotion->new() >>
+
+Create an instance of AnyEvent::LeapMotion.
+
+=over 4
+
+=item on_frame : Sub
+
+=item on_error : Sub
+
+=item host => '127.0.0.1' : Str
+
+=item port => 6437 : Num
+
+=item enable_gesture => 0 : Bool
+
+=back
+
+=item C<< $leap->run() >>
+
+Running an event loop.
+
+=back
+
+=head1 MOTIVATION
+
+There is L<Device::Leap> module on CPAN, but it is difficult to use and cannot get the gesture. So I made a module with simple interface.
 
 =head1 SEE ALSO
 
-L<Device::Leap>
+L<WebSocket Communication|https://developer.leapmotion.com/documentation/javascript/supplements/Leap_JSON.html>
 
 =head1 LICENSE
 
@@ -125,4 +157,3 @@ it under the same terms as Perl itself.
 Takumi Akiyama E<lt>t.akiym@gmail.comE<gt>
 
 =cut
-
