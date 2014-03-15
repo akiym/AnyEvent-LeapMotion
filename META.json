@@ -1,10 +1,10 @@
 {
-   "abstract" : "It's new $module",
+   "abstract" : "Perl interface to the Leap Motion Controller (via WebSocket)",
    "author" : [
       "Takumi Akiyama <t.akiym@gmail.com>"
    ],
    "dynamic_config" : 0,
-   "generated_by" : "Minilla/v0.5.6, CPAN::Meta::Converter version 2.130880",
+   "generated_by" : "Minilla/v0.11.0, CPAN::Meta::Converter version 2.120921",
    "license" : [
       "perl_5"
    ],
@@ -21,7 +21,8 @@
          "share",
          "eg",
          "examples",
-         "author"
+         "author",
+         "builder"
       ]
    },
    "prereqs" : {
@@ -42,6 +43,9 @@
       },
       "runtime" : {
          "requires" : {
+            "AnyEvent" : "0",
+            "JSON" : "0",
+            "Protocol::WebSocket" : "0",
             "perl" : "5.008005"
          }
       },
@@ -52,5 +56,16 @@
       }
    },
    "release_status" : "unstable",
+   "resources" : {
+      "bugtracker" : {
+         "web" : "https://github.com/akiym/AnyEvent-LeapMotion/issues"
+      },
+      "homepage" : "https://github.com/akiym/AnyEvent-LeapMotion",
+      "repository" : {
+         "type" : "git",
+         "url" : "git://github.com/akiym/AnyEvent-LeapMotion.git",
+         "web" : "https://github.com/akiym/AnyEvent-LeapMotion"
+      }
+   },
    "version" : "0.01"
 }
